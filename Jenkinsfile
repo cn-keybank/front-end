@@ -22,9 +22,9 @@ pipeline {
     stage('Docker push to registry'){
       steps {
         container('docker') {
-          withDockerRegistry([ credentialsId: "registry-creds", url: "" ]) {
+//          withDockerRegistry([ credentialsId: "registry-creds", url: "" ]) {
             sh "docker push ${env.DOCKER_REPO}:${env.TAG}"
-          }
+//          }
         }
       }
     }
