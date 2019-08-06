@@ -10,8 +10,8 @@ RUN apt-get install -y -qq apache2 && \
 
 # Config Apache
 COPY index.html /var/www/html/index.html
-COPY keybank_logo.jpg /var/www/html/dynatrace_logo.png
-COPY keybank_cloud.jpg /var/www/html/black-friday-fashion-friends-1345082.jpg
+COPY keybank_logo.jpg /var/www/html/keybank_logo.png
+COPY keybank_cloud.jpg /var/www/html/keybank_cloud.jpg
 COPY 000-default.conf  /etc/apache2/sites-enabled/000-default.conf
 
 EXPOSE 80
