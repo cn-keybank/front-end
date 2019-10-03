@@ -1,11 +1,12 @@
 FROM ubuntu:16.04
 
-# Update Ubuntu
-RUN apt-get update ; apt-get dist-upgrade -y -qq 
 # Proxy
 ENV http_proxy=http://vzproxy.keybank.com:80
 ENV https_proxy=http://vzproxy.keybank.com:80
 ENV no_proxy=localhost,127.0.0.1,.keybank.com,keybank.com,nexp.keybank.com
+
+# Update Ubuntu
+RUN apt-get update ; apt-get dist-upgrade -y -qq 
 
 # Install Apache + modules
 RUN apt-get install -y -qq apache2 && \
